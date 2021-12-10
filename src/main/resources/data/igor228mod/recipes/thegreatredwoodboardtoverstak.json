@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " LL",
+    " LL"
+  ],
+  "key": {
+    "L": {
+      "item": "igor228mod:thegreatredwoodboard1"
+    }
+
+  },
+  "result": {
+    "item": "minecraft:crafting_table",
+    "count": 1
+  }
+}

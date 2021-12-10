@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LL ",
+    "LP ",
+    " P "
+  ],
+  "key": {
+    "L": {
+      "item": "igor228mod:copperingot"
+    },
+    "P": {
+      "item": "minecraft:stick"
+    }
+    },
+  "result": {
+    "item": "igor228mod:axeskan1",
+    "count": 1
+  }
+}

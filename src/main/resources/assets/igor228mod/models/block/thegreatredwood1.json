@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures":
+  {
+    "particle":"igor228mod:blocks/thegreatredwood1",
+    "up": "igor228mod:blocks/thegreatredwoodtop1",
+    "down": "igor228mod:blocks/thegreatredwoodtop1",
+    "north": "igor228mod:blocks/thegreatredwood1",
+    "east":  "igor228mod:blocks/thegreatredwood1",
+    "south": "igor228mod:blocks/thegreatredwood1",
+    "west":  "igor228mod:blocks/thegreatredwood1"
+   }
+}

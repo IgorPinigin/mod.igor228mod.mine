@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " L",
+    " L"
+  ],
+  "key": {
+    "L": {
+      "item": "igor228mod:thegreatredwoodboard1"
+    }
+
+  },
+  "result": {
+    "item": "minecraft:stick",
+    "count": 4
+  }
+}

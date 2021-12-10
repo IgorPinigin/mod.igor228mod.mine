@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "igor228mod:thegreatredwood1"
+    }
+  ],
+  "result": {
+    "item": "igor228mod:thegreatredwoodboard1",
+    "count": 4
+  }
+}
