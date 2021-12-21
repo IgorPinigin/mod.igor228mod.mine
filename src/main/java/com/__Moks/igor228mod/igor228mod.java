@@ -1,9 +1,13 @@
 package com.__Moks.igor228mod;
 
 
+import com.__Moks.igor228mod.BronzeArmor.BronzeArmor;
 import com.__Moks.igor228mod.init.ModItems;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
