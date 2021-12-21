@@ -3,6 +3,7 @@ package com.__Moks.igor228mod;
 import com.__Moks.igor228mod.Blocks.CopperOreBlock;
 import com.__Moks.igor228mod.Blocks.TheGreatRedwood;
 import com.__Moks.igor228mod.Blocks.TheGreatRedwoodboard;
+import com.__Moks.igor228mod.Blocks.TinOreBlock;
 import com.__Moks.igor228mod.init.INonItem;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -25,22 +26,20 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.IForgeRegistry;
 
 @Mod.EventBusSubscriber(modid = igor228mod.MOD_ID, bus =Mod.EventBusSubscriber.Bus.MOD)
-public class ModBlocks
-{
+public class ModBlocks {
     private static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, igor228mod.MOD_ID);
 
-    public static final RegistryObject<Block> TheGreatRedwood1 = BLOCKS.register("thegreatredwood1",  TheGreatRedwood::new);
-    public static final RegistryObject<Block> TheGreatRedwoodboard1 = BLOCKS.register("thegreatredwoodboard1",  TheGreatRedwoodboard::new);
-    public static final RegistryObject<Block> CopperOreBlock1 = BLOCKS.register("copperoreblock",  CopperOreBlock::new);
+    public static final RegistryObject<Block> TheGreatRedwood1 = BLOCKS.register("thegreatredwood1", TheGreatRedwood::new);
+    public static final RegistryObject<Block> TheGreatRedwoodboard1 = BLOCKS.register("thegreatredwoodboard1", TheGreatRedwoodboard::new);
+    public static final RegistryObject<Block> CopperOreBlock1 = BLOCKS.register("copperoreblock", CopperOreBlock::new);
+    public static final RegistryObject<Block> TinOreBlock1 = BLOCKS.register("tinoreblock", TinOreBlock::new);
 
-    public static void register()
-    {
+    public static void register() {
         BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     @SubscribeEvent
-    public static void onRegisterItems(final RegistryEvent.Register<Item> event)
-    {
+    public static void onRegisterItems(final RegistryEvent.Register<Item> event) {
         final IForgeRegistry<Item> registry = event.getRegistry();
         ModBlocks.BLOCKS.getEntries().stream()
                 .map(RegistryObject::get)
@@ -52,17 +51,26 @@ public class ModBlocks
                     registry.register(blockItem);
                 });
     }
+
     @SubscribeEvent
-    public static void initServer(FMLCommonSetupEvent event)
-    {
+    public static void initServer(FMLCommonSetupEvent event) {
         addCopperOre(Biomes.FOREST);
         addCopperOre(Biomes.TAIGA_HILLS);
+        addTinOre(Biomes.FOREST);
+        addTinOre(Biomes.PLAINS);
     }
-    public static void addCopperOre(Biome biome)
-    {
+
+    public static void addCopperOre(Biome biome) {
         biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
                 Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.CopperOreBlock1.get().getDefaultState(), 17))
                         .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 0, 0, 128))));
 
+
+    }
+
+    public static void addTinOre(Biome biome) {
+        biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
+                Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, ModBlocks.TinOreBlock1.get().getDefaultState(), 17))
+                        .withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(20, 0, 0, 128))));
     }
 }

@@ -2,7 +2,7 @@
   "parent": "item/generated",
   "textures":
   {
-    "layer0": "igor228mod:armors/copperingot"
+    "layer0": "igor228mod:items/bronze_boots"
   }
 
 }

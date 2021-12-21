@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "L L",
+    "LLL",
+    "LLL"
+  ],
+  "key": {
+    "L": {
+      "item": "igor228mod:bronzeingot"
+    }
+  },
+  "result": {
+    "item": "igor228mod:bronze_chest",
+    "count": 1
+  }
+}
